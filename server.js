@@ -8,12 +8,7 @@ require('dotenv').config();
 const app = express();
 
 // 1. Enhanced CORS (Allow Frontend to connect)
-app.use(cors({
-  origin: 'http://localhost:3000',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-}));
+app.use(cors());
 
 // 2. Middleware
 app.use(express.json());
